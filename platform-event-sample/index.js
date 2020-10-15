@@ -13,7 +13,7 @@ conn.login(config.username, config.password, function(err, userInfo) {
 
   console.log("Authenticated and waiting for a message...");
 
-  conn.streaming.topic("/event/PDLM__Change_Event__e").subscribe(function(message) {
+  conn.streaming.topic("/event/PDLM__ChangeEvent__e").subscribe(function(message) {
     console.dir(message);
   });
 
